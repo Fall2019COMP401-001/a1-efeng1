@@ -1,6 +1,7 @@
 package a1;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class A1Jedi {
 
@@ -24,13 +25,18 @@ public class A1Jedi {
 			scan.next();
 			scan.next();
 			int numPurchases = scan.nextInt();
+			ArrayList<String> incrementedItems = new ArrayList<String>();
+			
 			for (int j = 0; j < numPurchases; j++) {
 				int amount = scan.nextInt();
 				String item = scan.next();
 				
 				for (int k = 0; k < numStoreItems; k++) {
 					if (items[k].equals(item)) {
-						customersBuying[k]++;
+						if (!incrementedItems.contains(item)) {
+							customersBuying[k]++;
+							incrementedItems.add(item);
+						}
 						numBought[k] += amount;
 						break;
 					}
