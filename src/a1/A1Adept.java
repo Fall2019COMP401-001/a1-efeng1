@@ -46,7 +46,7 @@ public class A1Adept {
 		
 		System.out.printf("Biggest: %s (%.2f)%n", highestCustomer, highestSpent);
 		System.out.printf("Smallest: %s (%.2f)%n", lowestCustomer, lowestSpent);
-		System.out.printf("Average: %.2f", totalSpent/numCustomers);
+		System.out.printf("Average: %.2f%n", totalSpent/numCustomers);
 		
 		scan.close();
 	}
